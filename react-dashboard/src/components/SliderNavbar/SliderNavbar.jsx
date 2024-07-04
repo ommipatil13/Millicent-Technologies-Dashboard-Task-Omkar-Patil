@@ -1,5 +1,14 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { PiSquaresFourFill } from "react-icons/pi";
+import { LuSearch } from "react-icons/lu";
+import { FaAddressCard } from "react-icons/fa";
+import { RiSettings4Fill } from "react-icons/ri";
+import { TbHelpOctagonFilled } from "react-icons/tb";
+import { HiMiniUserGroup } from "react-icons/hi2";
+import { BsStack } from "react-icons/bs"
+import { MdOutlineKeyboardArrowUp } from 'react-icons/md'
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
 
 const SliderNavbar = () => {
 
@@ -10,28 +19,38 @@ const SliderNavbar = () => {
     }
 
     return (
-        <div className='bg-zinc-800 w-1/5 rounded-r-lg pl-5' >
+        <div className='bg-zinc-800 w-1/5 rounded-r-lg ps-4 pe-6' >
 
-            <i className='text-red-600 inline-block mt-5 ml-5 ' >i</i>
+            <i className='text-red-600 inline-block mt-5 ml-5 ' >icon</i>
 
-            <div className='bg-green-300 mt-10' >
+            <div className=' mt-10' >
 
-                <ul className='bg-pink-400 space-y-3' >
-                    <li>  <NavLink>Dashboard</NavLink></li>
-                    <li>  <NavLink>Research</NavLink></li>
-                    <li> <NavLink>Hierarchy</NavLink></li>
-                    <li> <NavLink>Clients</NavLink></li>
-                    <li> <NavLink>Analysts</NavLink></li>
+                <ul className=' space-y-4 text-gray-400' >
+                    <li className='hover:text-white'> <NavLink className='flex items-center' ><PiSquaresFourFill />&nbsp;&nbsp;Dashboard</NavLink></li>
+                    <li className='hover:text-white'>  <NavLink className='flex items-center'><LuSearch />&nbsp;&nbsp;Research</NavLink></li>
+                    <li className='hover:text-white'> <NavLink className='flex items-center'><BsStack />&nbsp;&nbsp;Hierarchy</NavLink></li>
+                    <li className='hover:text-white'> <NavLink className='flex items-center'><HiMiniUserGroup />&nbsp;&nbsp;Clients</NavLink></li>
+                    <li className='hover:text-white'> <NavLink className='flex items-center'><FaAddressCard />&nbsp;&nbsp;Analysts</NavLink></li>
 
-                    <li className='bg-blue-800 hover:cursor-pointer' onClick={showHide} >
-                        <NavLink>Settings <span>^</span></NavLink>
-                        {showNavlink && <ul className='bg-red-200 p-5'>
-                            <li>ok</li>
-                            <li>ok</li>
-                        </ul>}
-                    </li>
+                    <li onClick={showHide}
+                        className=' hover:text-white' >
+                        <NavLink className='flex justify-between items-center'>
+                            <span className='flex items-center'><RiSettings4Fill />&nbsp;&nbsp;Setting</span>
 
-                    <li> <NavLink>Help</NavLink></li>
+                            {showNavlink ? <MdOutlineKeyboardArrowUp /> : <MdOutlineKeyboardArrowDown />}
+
+                        </NavLink></li>
+
+                    {showNavlink && <ul className='  space-y-2  text-gray-400  '>
+                        <li className='hover:bg-zinc-900 hover:text-white ps-4 py-1 rounded-md ' >
+                            <NavLink> &#x2022; &nbsp;Manage Branch</NavLink></li>
+                        <li className='hover:bg-zinc-900 hover:text-white ps-4 py-1 rounded-md '>
+                            <NavLink> &#x2022; &nbsp;Manage User</NavLink></li>
+                        <li className='hover:bg-zinc-900 hover:text-white  ps-4 py-1 rounded-md ' >
+                            <NavLink> &#x2022; &nbsp;Add Category</NavLink></li>
+                    </ul>}
+
+                    <li className='hover:text-white'> <NavLink className='flex items-center'><TbHelpOctagonFilled />&nbsp;&nbsp;Help</NavLink></li>
                 </ul>
             </div>
 
