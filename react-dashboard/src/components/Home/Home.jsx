@@ -5,14 +5,14 @@ import AdminHome from '../AdminHome/AdminHome'
 const Home = ({ children }) => {
     const [navClose, setNavClose] = useState(true)
     return (
-        <div className='flex min-h-screen' >
+        <div className='flex h-screen' >
 
             {navClose && <SliderNavbar />}
 
-            <div className=' bg-zinc-200 overflow-y-scroll   w-screen' >
+            <div className=' bg-zinc-200 overflow-y-scroll  w-screen' >
                 <AdminHome navClose={navClose} setNavClose={setNavClose} />
 
-                <div className='bg-zinc-100 h-96 m-4 rounded-md  ' >
+                <div className='bg-zinc-100 m-4 rounded-md shadow-md' >
                     {children}
                 </div>
             </div>

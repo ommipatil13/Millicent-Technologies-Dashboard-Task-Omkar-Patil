@@ -1,8 +1,9 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home/Home'
-import AddCategory from './components/AdminPages/AddCategory'
+
 import Check from './components/AdminPages/Check'
+import AddCategory from './components/AdminPages/AddCategory/AddCategory'
 
 function App() {
 
