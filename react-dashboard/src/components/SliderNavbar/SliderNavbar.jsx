@@ -27,7 +27,7 @@ const SliderNavbar = () => {
 
                 <ul className=' space-y-4 text-gray-400' >
                     <li className='hover:text-white'>
-                        <NavLink to='/' className='flex items-center' ><PiSquaresFourFill />&nbsp;&nbsp;Dashboard</NavLink>
+                        <NavLink to='/dashboard' className='flex items-center' ><PiSquaresFourFill />&nbsp;&nbsp;Dashboard</NavLink>
                     </li>
                     <li className='hover:text-white'>
                         <NavLink className='flex items-center'><LuSearch />&nbsp;&nbsp;Research</NavLink>
@@ -52,12 +52,12 @@ const SliderNavbar = () => {
                         </NavLink></li>
 
                     {showNavlink && <ul className='  space-y-2  text-gray-400  '>
-                        <li className='hover:bg-zinc-900 hover:text-white ps-4 py-1 rounded-md ' >
+                        <li className='hover:bg-zinc-950 hover:text-white ps-4 py-1 rounded-md ' >
                             <NavLink> &#x2022; &nbsp;Manage Branch</NavLink></li>
-                        <li className='hover:bg-zinc-900 hover:text-white ps-4 py-1 rounded-md '>
+                        <li className='hover:bg-zinc-950 hover:text-white ps-4 py-1 rounded-md '>
                             <NavLink> &#x2022; &nbsp;Manage User</NavLink></li>
-                        <li className='hover:bg-zinc-900 hover:text-white  ps-4 py-1 rounded-md ' >
-                            <NavLink to='/addcategory' > &#x2022; &nbsp;Add Category</NavLink></li>
+                        <li className='hover:bg-zinc-950 hover:text-white  ps-4 py-1 rounded-md ' >
+                            <NavLink to='/' > &#x2022; &nbsp;Add Category</NavLink></li>
                     </ul>}
 
                     <li className='hover:text-white'> <NavLink className='flex items-center'><TbHelpOctagonFilled />&nbsp;&nbsp;Help</NavLink></li>

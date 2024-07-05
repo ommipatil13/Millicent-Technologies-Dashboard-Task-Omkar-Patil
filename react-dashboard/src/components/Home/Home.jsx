@@ -9,12 +9,12 @@ const Home = ({ children }) => {
 
             {navClose && <SliderNavbar />}
 
-            <div className=' bg-zinc-200 overflow-y-scroll  space-y-2 w-screen' >
+            <div className=' bg-zinc-200 overflow-y-scroll   w-screen' >
                 <AdminHome navClose={navClose} setNavClose={setNavClose} />
 
-                <main className='bg-red-600 h-96 m-2 rounded-md ' >
+                <div className='bg-zinc-100 h-96 m-4 rounded-md  ' >
                     {children}
-                </main>
+                </div>
             </div>
 
         </div>

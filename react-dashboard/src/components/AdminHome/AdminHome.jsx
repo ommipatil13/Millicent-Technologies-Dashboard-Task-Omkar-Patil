@@ -7,18 +7,16 @@ import AdminHomeNavbar from './AdminHomeNavbar';
 const AdminHome = ({ setNavClose, navClose, }) => {
     // const [navClose, setNavClose] = useState(true)
     return (
-        <div className='bg-blue-400  '>
+        <div className='bg-zinc-100 flex items-center shadow-md shadow-zinc-500 '>
 
-            <div className=' flex  ' >
-                <button onClick={() => setNavClose(!navClose)} className='bg-white  p-1.5 outline-none rounded-md mt-5 -ml-3 ' >
+            <div>
+                <button onClick={() => setNavClose(!navClose)} className='bg-white  p-1.5 outline-none rounded-md -ms-3 border ' >
                     {navClose ? <TbArrowBarToLeft /> : <TbArrowBarToRight />}
                 </button>
-
-                <AdminHomeNavbar />
-
-
-
             </div>
+
+            <AdminHomeNavbar />
+
 
         </div>
     )
