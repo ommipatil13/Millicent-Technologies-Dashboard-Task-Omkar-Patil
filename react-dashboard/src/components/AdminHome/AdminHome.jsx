@@ -16,7 +16,7 @@ const AdminHome = ({ setNavClose, navClose, }) => {
 
                 <AdminHomeNavbar />
 
-
+                {/* <AddCategory /> */}
 
             </div>
 
