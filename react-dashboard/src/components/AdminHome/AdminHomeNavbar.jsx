@@ -2,7 +2,9 @@ import React from 'react'
 
 const AdminHomeNavbar = () => {
     return (
-        <div>AdminHomeNavbar</div>
+        <div>
+
+        </div>
     )
 }
 

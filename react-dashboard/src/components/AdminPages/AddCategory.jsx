@@ -4,7 +4,65 @@ import Home from '../Home/Home'
 
 const AddCategory = () => {
     return (
-        <Home className='bg-yellow-500 ' >AddCategory</Home>
+        <Home >Check
+
+
+
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+            <h1>ok</h1>
+
+
+
+
+        </Home>
     )
 }
 
