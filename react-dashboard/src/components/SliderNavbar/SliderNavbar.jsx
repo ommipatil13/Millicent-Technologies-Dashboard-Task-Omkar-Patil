@@ -27,7 +27,7 @@ const SliderNavbar = () => {
 
                 <ul className=' space-y-4 text-gray-400' >
                     <li className='hover:text-white'>
-                        <NavLink to='/check' className='flex items-center' ><PiSquaresFourFill />&nbsp;&nbsp;Dashboard</NavLink>
+                        <NavLink to='/' className='flex items-center' ><PiSquaresFourFill />&nbsp;&nbsp;Dashboard</NavLink>
                     </li>
                     <li className='hover:text-white'>
                         <NavLink className='flex items-center'><LuSearch />&nbsp;&nbsp;Research</NavLink>
