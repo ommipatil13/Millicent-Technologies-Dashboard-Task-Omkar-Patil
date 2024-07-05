@@ -19,7 +19,7 @@ const SliderNavbar = () => {
     }
 
     return (
-        <div className='bg-zinc-900 w-1/5 rounded-r-lg ps-4 pe-6' >
+        <div className='bg-zinc-900 h-screen w-1/5  rounded-r-lg ps-4 pe-6 ' >
 
             <i className='text-red-600 inline-block mt-5 ml-5 ' >icon</i>
 

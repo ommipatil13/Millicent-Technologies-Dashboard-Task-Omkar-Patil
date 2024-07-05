@@ -1,8 +1,10 @@
 import React from 'react'
+import Layout from '../Layout/Layout'
+import Home from '../Home/Home'
 
 const AddCategory = () => {
     return (
-        <div className='bg-yellow-500 w-screen' >AddCategory</div>
+        <Home className='bg-yellow-500 ' >AddCategory</Home>
     )
 }
 

@@ -3,13 +3,18 @@ import AdminHome from '../AdminHome/AdminHome'
 import SliderNavbar from '../SliderNavbar/SliderNavbar'
 import Home from '../Home/Home'
 
-const AdminLayout = ({ children }) => {
+const Layout = ({ children }) => {
     return (
         <div>
+
             <Home />
-            {children}
+
+            <main className='bg-red-400' >
+                {children}
+            </main>
+
         </div>
     )
 }
 
-export default AdminLayout
+export default Layout
