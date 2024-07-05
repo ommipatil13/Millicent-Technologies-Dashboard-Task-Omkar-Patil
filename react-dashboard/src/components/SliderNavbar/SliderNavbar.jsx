@@ -19,18 +19,28 @@ const SliderNavbar = () => {
     }
 
     return (
-        <div className='bg-zinc-800 w-1/5 rounded-r-lg ps-4 pe-6' >
+        <div className='bg-zinc-900 w-1/5 rounded-r-lg ps-4 pe-6' >
 
             <i className='text-red-600 inline-block mt-5 ml-5 ' >icon</i>
 
             <div className=' mt-10' >
 
                 <ul className=' space-y-4 text-gray-400' >
-                    <li className='hover:text-white'> <NavLink className='flex items-center' ><PiSquaresFourFill />&nbsp;&nbsp;Dashboard</NavLink></li>
-                    <li className='hover:text-white'>  <NavLink className='flex items-center'><LuSearch />&nbsp;&nbsp;Research</NavLink></li>
-                    <li className='hover:text-white'> <NavLink className='flex items-center'><BsStack />&nbsp;&nbsp;Hierarchy</NavLink></li>
-                    <li className='hover:text-white'> <NavLink className='flex items-center'><HiMiniUserGroup />&nbsp;&nbsp;Clients</NavLink></li>
-                    <li className='hover:text-white'> <NavLink className='flex items-center'><FaAddressCard />&nbsp;&nbsp;Analysts</NavLink></li>
+                    <li className='hover:text-white'>
+                        <NavLink to='/check' className='flex items-center' ><PiSquaresFourFill />&nbsp;&nbsp;Dashboard</NavLink>
+                    </li>
+                    <li className='hover:text-white'>
+                        <NavLink className='flex items-center'><LuSearch />&nbsp;&nbsp;Research</NavLink>
+                    </li>
+                    <li className='hover:text-white'>
+                        <NavLink className='flex items-center'  ><BsStack />&nbsp;&nbsp;Hierarchy</NavLink>
+                    </li>
+                    <li className='hover:text-white'>
+                        <NavLink className='flex items-center'><HiMiniUserGroup />&nbsp;&nbsp;Clients</NavLink>
+                    </li>
+                    <li className='hover:text-white'>
+                        <NavLink className='flex items-center'><FaAddressCard />&nbsp;&nbsp;Analysts</NavLink>
+                    </li>
 
                     <li onClick={showHide}
                         className=' hover:text-white' >
@@ -47,7 +57,7 @@ const SliderNavbar = () => {
                         <li className='hover:bg-zinc-900 hover:text-white ps-4 py-1 rounded-md '>
                             <NavLink> &#x2022; &nbsp;Manage User</NavLink></li>
                         <li className='hover:bg-zinc-900 hover:text-white  ps-4 py-1 rounded-md ' >
-                            <NavLink> &#x2022; &nbsp;Add Category</NavLink></li>
+                            <NavLink to='/addcategory' > &#x2022; &nbsp;Add Category</NavLink></li>
                     </ul>}
 
                     <li className='hover:text-white'> <NavLink className='flex items-center'><TbHelpOctagonFilled />&nbsp;&nbsp;Help</NavLink></li>
