@@ -46,7 +46,7 @@ const AddCategory = () => {
 
                     <div className='space-y-2 '>
                         <div>
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name" className='text-zinc-400' >Name</label>
                         </div>
                         <div className='flex items-center space-x-7' >
                             <input type="text" name="name" id="name" placeholder='Search by Category'
@@ -59,7 +59,7 @@ const AddCategory = () => {
 
 
                 {/* table div  */}
-                <div className='bg-pink-400 mt-10'>
+                <div className=' mt-8'>
                     {data.map((item) => <AddCategoryTable key={item.id} item={item} />)}
                 </div>
 
