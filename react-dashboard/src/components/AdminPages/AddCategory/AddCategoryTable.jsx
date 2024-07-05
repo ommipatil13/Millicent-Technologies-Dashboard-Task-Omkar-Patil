@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const AddCategoryTable = () => {
+
     return (
-        <div>AddCategoryTable</div>
+        <div>
+
+        </div>
     )
 }
 

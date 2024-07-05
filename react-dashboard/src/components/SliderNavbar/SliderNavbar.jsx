@@ -43,7 +43,7 @@ const SliderNavbar = () => {
                     </li>
 
                     <li onClick={showHide}
-                        className=' hover:text-white' >
+                        className=' hover:text-white ' >
                         <NavLink className='flex justify-between items-center'>
                             <span className='flex items-center'><RiSettings4Fill />&nbsp;&nbsp;Setting</span>
 
