@@ -18,7 +18,7 @@ const SliderNavbar = () => {
     };
     // h-screen h-full
     return (
-        <div className="bg-zinc-900  w-1/5 rounded-r-lg ps-4 pe-6 ">
+        <div className="lg:bg-zinc-900  lg:w-1/5 lg:rounded-r-lg lg:ps-4 lg:pe-6 bg-zinc-900 w-screen">
             <i className="text-red-600 inline-block pt-5 pl-5 ">icon</i>
 
             <div className="mt-10">

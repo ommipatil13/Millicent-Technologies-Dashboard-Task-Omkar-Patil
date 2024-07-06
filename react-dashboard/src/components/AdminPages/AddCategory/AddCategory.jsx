@@ -31,28 +31,18 @@ const AddCategory = () => {
         if (text === '') {
             setData(dataUpdate)
         }
-        // else if (!text) {
-        //     setData(dataUpdate)
-        // }
-        else {
 
+        else {
             let tempList = data.filter(item => {
                 return item.category_name.toLowerCase().indexOf(text.toLowerCase()) > -1; //-1 false
             })
-
-            if (!tempList) {
-                return setData(dataUpdate)
-            }
-            else {
-                return setData(tempList)
-            }
-
+            setData(tempList)
         }
     }
 
     //delete button
     const onDelete = (text) => {
-        data.filter((item) => data.indexOf(item) !== text)
+        data.filter((item) => item.id !== text)
     }
 
 
@@ -60,7 +50,7 @@ const AddCategory = () => {
         <Home>
 
 
-            <div className='p-5 '>
+            <div className='p-5 w-full '>
 
                 {/* category listing div  */}
                 <div className='flex justify-between items-center'>
@@ -76,13 +66,13 @@ const AddCategory = () => {
                 </div>
 
                 {/* input div  */}
-                <div className=' mt-4 flex space-x-7  '>
+                <div className=' mt-4 flex space-x-7 w-full '>
 
                     <AddCategoryInput inputTitle='Role' categoryInput={categoryInputSt} setCategoryInput={setCategoryInputSt} />
                     <AddCategoryInput inputTitle='Zone' categoryInput={categoryInputNd} setCategoryInput={setCategoryInputNd} />
                     <AddCategoryInput inputTitle='City' categoryInput={categoryInputRd} setCategoryInput={setCategoryInputRd} />
 
-                    <div className='space-y-2 '>
+                    <div className='space-y-2 w-full '>
                         <div>
                             <label htmlFor="name" className='text-zinc-400' >Name</label>
                         </div>

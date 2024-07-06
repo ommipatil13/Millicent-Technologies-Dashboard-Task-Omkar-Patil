@@ -8,8 +8,8 @@ const AdminHomeNavbar = () => {
     const { pathname } = useLocation();
     const [openCloseSearch, setOpenCloseSearch] = useState(true);
     return (
-        <div className="flex  w-screen justify-between px-6 h-20 items-center">
-            <ul className="flex space-x-8 text-gray-700 font-semibold ">
+        <div className="lg:flex  lg:w-full lg:justify-between lg:px-6 lg:h-20 lg:items-center hidden lg:block md:block ">
+            <ul className="flex space-x-8 text-gray-700  ">
                 <li className={`text-gray-600 font-bold ${pathname.includes('dashboard') && 'text-green-500'}`}>
                     <Link to="/dashboard">Dashboard </Link>
                 </li>
