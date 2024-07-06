@@ -7,7 +7,7 @@ import AdminHomeNavbar from './AdminHomeNavbar';
 const AdminHome = ({ setNavClose, navClose, }) => {
     // const [navClose, setNavClose] = useState(true)
     return (
-        <div className='bg-zinc-50 flex items-center shadow-lg '>
+        <div className='lg:bg-zinc-50 lg:flex lg:items-center shadow-lg sm:hidden  '>
 
             <div>
                 <button onClick={() => setNavClose(!navClose)} className='bg-white  p-1.5 outline-none rounded-md -ms-3 border ' >

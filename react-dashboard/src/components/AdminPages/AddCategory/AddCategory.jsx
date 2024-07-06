@@ -59,9 +59,51 @@ const AddCategory = () => {
 
 
                 {/* table div  */}
-                <div className=' mt-8'>
-                    {data.map((item) => <AddCategoryTable key={item.id} item={item} />)}
+                {/* <div className=' mt-8'> */}
+
+
+                <div className="relative overflow-x-auto   mt-8">
+                    <table className="w-full text-sm text-left rtl:text-right text-zinc-600 ">
+
+                        <thead className="text-xs text-gray-400  bg-gray-200 ">
+                            <tr>
+                                <th scope="col" className="px-4 py-3 ">
+                                    No
+                                </th>
+                                <th scope="col" className="px-4 py-3">
+                                    Segment
+                                </th>
+                                <th scope="col" className="px-4 py-3">
+                                    Type
+                                </th>
+                                <th scope="col" className="px-4 py-3">
+                                    Category Name
+                                </th>
+                                <th scope="col" className="px-4 py-3">
+                                    Leg 1 Tracking
+                                </th>
+                                <th scope="col" className="px-4 py-3">
+                                    Leg 2 Tracking
+                                </th>
+                                <th scope="col" className="px-4 py-3">
+
+                                </th>
+                                <th scope="col" className="px-4 py-3">
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {data.map((item) => <AddCategoryTable key={item.id} item={item} />)}
+
+
+                        </tbody>
+                    </table>
                 </div>
+
+
+                {/* </div> */}
 
 
 
