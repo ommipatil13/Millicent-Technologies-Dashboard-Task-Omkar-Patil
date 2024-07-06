@@ -14,22 +14,22 @@ const AdminHomeNavbar = () => {
                     <Link to="/dashboard">Dashboard </Link>
                 </li>
                 <li className={`text-gray-600 font-bold ${pathname.includes('research') && 'text-green-500'}`}>
-                    <Link>Research </Link>
+                    <Link to='/research'>Research </Link>
                 </li>
                 <li className={`text-gray-600 font-bold ${pathname.includes('hierarchy') && 'text-green-500'}`}>
-                    <Link>Hierarchy </Link>
+                    <Link to='/hierarchy'>Hierarchy </Link>
                 </li>
                 <li className={`text-gray-600 font-bold ${pathname.includes('clients') && 'text-green-500'}`}>
-                    <Link>Clients </Link>
+                    <Link to='/clients'>Clients </Link>
                 </li>
                 <li className={`text-gray-600 font-bold ${pathname.includes('analysts') && 'text-green-500'}`}>
-                    <Link>Analysts </Link>
+                    <Link to='/analysts'>Analysts </Link>
                 </li>
                 <li className={`text-gray-600 font-bold ${pathname.includes('') && 'text-green-500'}`}>
                     <Link to="/">Settings </Link>
                 </li>
                 <li className={`text-gray-600 font-bold ${pathname.includes('help') && 'text-green-500'}`}>
-                    <Link>Help </Link>
+                    <Link to='/help'>Help </Link>
                 </li>
             </ul>
 

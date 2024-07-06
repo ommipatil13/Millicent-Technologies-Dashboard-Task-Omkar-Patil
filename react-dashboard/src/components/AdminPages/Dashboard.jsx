@@ -4,17 +4,12 @@ import Home from '../Home/Home'
 
 const Check = () => {
     return (
-        <Home >Check
+        <Home >
 
+            <div>
+                <h1>Dashboard</h1>
+            </div>
 
-
-
-
-            <h1>ok</h1>
-            <h1>ok</h1>
-            <h1>ok</h1>
-
-            <h1>ok</h1>
         </Home>
     )
 }
