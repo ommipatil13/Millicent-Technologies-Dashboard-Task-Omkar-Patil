@@ -41,22 +41,23 @@ const AddCategory = () => {
     }
 
     //delete button
-    const onDelete = (text) => {
-        data.filter((item) => item.id !== text)
+    const onDelete = (id) => {
+
+        const del = data.filter((val) => val.id !== id)
+        setData(del)
     }
 
 
     return (
         <Home>
 
-
-            <div className='lg:p-5 lg:w-full p-5 w-full '>
+            <div className='lg:px-5 lg:py-5  py-5 px-3 w-full '>
 
                 {/* category listing div  */}
                 <div className='lg:flex lg:justify-between lg:items-center flex justify-between items-center'>
-                    <p className='lg:text-2xl font-semibold text-lg ' >Category Listing</p>
+                    <p className='lg:text-2xl font-semibold text-xl ' >Category Listing</p>
 
-                    <div className='lg:flex lg:space-x-6 lg:items-center flex space-x-1 items-center'>
+                    <div className='lg:flex lg:space-x-6 lg:items-center flex space-x-2 items-center'>
                         <BsDownload className='text-2xl text-green-600' />
                         <BsFillFunnelFill className='text-2xl text-green-600' />
                         {/* <BsFunnelFill className='text-2xl text-green-600' /> */}
@@ -66,23 +67,24 @@ const AddCategory = () => {
                 </div>
 
                 {/* input div  */}
-                <div className=' lg:mt-4 lg:flex lg:space-x-7 lg:w-full w-full mt-4 '>
+                <div className=' lg:mt-4 lg:flex lg:space-x-7 lg:w-full  mt-4 flex space-x-1  '>
 
                     <AddCategoryInput inputTitle='Role' categoryInput={categoryInputSt} setCategoryInput={setCategoryInputSt} />
                     <AddCategoryInput inputTitle='Zone' categoryInput={categoryInputNd} setCategoryInput={setCategoryInputNd} />
                     <AddCategoryInput inputTitle='City' categoryInput={categoryInputRd} setCategoryInput={setCategoryInputRd} />
 
-                    <div className='space-y-2 w-full '>
+                    <div className='lg:space-y-2 space-y-1 '>
                         <div>
                             <label htmlFor="name" className='text-zinc-400' >Name</label>
                         </div>
-                        <div className='flex items-center space-x-7' >
+                        <div className='flex items-center lg:space-x-7 space-x-2' >
                             <input value={search} onChange={(e) => {
                                 setSearch(e.target.value)
                                 onSearch(e.target.value)
                             }}
                                 type="text" name="name" id="name" placeholder='Search by Category'
-                                className='ps-5 pe-16 py-2 items-center outline-none bg-white rounded-md shadow' />
+                                className='lg:ps-5 lg:pe-16 lg:py-2 items-center lg:w-full outline-none bg-white rounded-md shadow
+                                 py-2 px-2 w-28' />
                             <button onClick={() => setData(dataUpdate)} >
                                 <IoIosRefresh className='text-green-600 text-2xl' />
                             </button>

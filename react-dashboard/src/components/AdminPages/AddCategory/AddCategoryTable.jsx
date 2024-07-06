@@ -32,7 +32,7 @@ const AddCategoryTable = ({ item, onDelete }) => {
                     <MdOutlineModeEdit className='text-lg' />
                 </td>
                 <td className=" py-4 ">
-                    <button onClick={onDelete(item.id)} ><RiDeleteBin5Line className='text-lg' /></button>
+                    <button onClick={() => onDelete(item.id)} ><RiDeleteBin5Line className='text-lg' /></button>
                 </td>
             </tr>
 
