@@ -11,7 +11,7 @@ function App() {
     <>
 
       {/* <Home /> */}
-
+      {/* here are routing  */}
       <Routes>
         {/* <Route path='/' element={<Home />} /> */}
         <Route path='/' element={<AddCategory />} />
