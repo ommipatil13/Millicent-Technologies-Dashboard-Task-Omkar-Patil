@@ -31,12 +31,22 @@ const AddCategory = () => {
         if (text === '') {
             setData(dataUpdate)
         }
+        // else if (!text) {
+        //     setData(dataUpdate)
+        // }
         else {
 
             let tempList = data.filter(item => {
                 return item.category_name.toLowerCase().indexOf(text.toLowerCase()) > -1; //-1 false
             })
-            setData(tempList)
+
+            if (!tempList) {
+                return setData(dataUpdate)
+            }
+            else {
+                return setData(tempList)
+            }
+
         }
     }
 
@@ -78,7 +88,9 @@ const AddCategory = () => {
                             }}
                                 type="text" name="name" id="name" placeholder='Search by Category'
                                 className='ps-5 pe-16 py-2 items-center outline-none bg-white rounded-md shadow' />
-                            <IoIosRefresh className='text-green-600 text-2xl' />
+                            <button onClick={() => setData(dataUpdate)} >
+                                <IoIosRefresh className='text-green-600 text-2xl' />
+                            </button>
                         </div>
                     </div>
 
