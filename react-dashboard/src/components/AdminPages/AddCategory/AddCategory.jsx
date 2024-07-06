@@ -50,23 +50,23 @@ const AddCategory = () => {
         <Home>
 
 
-            <div className='p-5 w-full '>
+            <div className='lg:p-5 lg:w-full p-5 w-full '>
 
                 {/* category listing div  */}
-                <div className='flex justify-between items-center'>
-                    <p className='text-2xl font-semibold' >Category Listing</p>
+                <div className='lg:flex lg:justify-between lg:items-center flex justify-between items-center'>
+                    <p className='lg:text-2xl font-semibold text-lg ' >Category Listing</p>
 
-                    <div className='flex space-x-6 items-center'>
+                    <div className='lg:flex lg:space-x-6 lg:items-center flex space-x-1 items-center'>
                         <BsDownload className='text-2xl text-green-600' />
                         <BsFillFunnelFill className='text-2xl text-green-600' />
                         {/* <BsFunnelFill className='text-2xl text-green-600' /> */}
-                        <button className='bg-green-600 px-3 py-1.5 rounded-md text-white font-semibold 
-                        hover:bg-green-500 hover:scale-105 transition-all'>+ Add Category</button>
+                        <button className='bg-green-600 lg:px-3 lg:py-1.5  rounded-md text-white font-semibold 
+                        hover:bg-green-500 hover:scale-105 transition-all py-1.5 px-2 '>+ Add Category</button>
                     </div>
                 </div>
 
                 {/* input div  */}
-                <div className=' mt-4 flex space-x-7 w-full '>
+                <div className=' lg:mt-4 lg:flex lg:space-x-7 lg:w-full w-full mt-4 '>
 
                     <AddCategoryInput inputTitle='Role' categoryInput={categoryInputSt} setCategoryInput={setCategoryInputSt} />
                     <AddCategoryInput inputTitle='Zone' categoryInput={categoryInputNd} setCategoryInput={setCategoryInputNd} />
