@@ -11,6 +11,7 @@ import { MdOutlineKeyboardArrowUp } from 'react-icons/md';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 
 const SliderNavbar = () => {
+    //useState to manage slideBar
     const [showNavlink, setShowNavlink] = useState(true);
 
     const showHide = () => {
