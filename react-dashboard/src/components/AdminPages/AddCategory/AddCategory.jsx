@@ -50,6 +50,11 @@ const AddCategory = () => {
         }
     }
 
+    //delete button
+    const onDelete = (text) => {
+        data.filter((item) => data.indexOf(item) !== text)
+    }
+
 
     return (
         <Home>
@@ -133,7 +138,7 @@ const AddCategory = () => {
                         </thead>
                         <tbody>
 
-                            {data.map((item) => <AddCategoryTable key={item.id} item={item} />)}
+                            {data.map((item) => <AddCategoryTable key={item.id} item={item} onDelete={onDelete} />)}
 
 
                         </tbody>

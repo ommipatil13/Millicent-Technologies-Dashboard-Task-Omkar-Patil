@@ -10,7 +10,8 @@ const AdminHome = ({ setNavClose, navClose, }) => {
         <div className='lg:bg-zinc-50 lg:flex lg:items-center shadow-lg sm:hidden  '>
 
             <div>
-                <button onClick={() => setNavClose(!navClose)} className='bg-white  p-1.5 outline-none rounded-md -ms-3 border ' >
+                <button onClick={() => setNavClose(!navClose)} className='bg-white  p-1.5 outline-none 
+                rounded-md  border ' >
                     {navClose ? <TbArrowBarToLeft /> : <TbArrowBarToRight />}
                 </button>
             </div>

@@ -1,43 +1,60 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import { LuSearch } from "react-icons/lu";
-import { FaRegBell } from "react-icons/fa";
-import { TbUserSquareRounded } from "react-icons/tb";
+import React, { useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { LuSearch } from 'react-icons/lu';
+import { FaRegBell } from 'react-icons/fa';
+import { TbUserSquareRounded } from 'react-icons/tb';
 
 const AdminHomeNavbar = () => {
-    const [openCloseSearch, setOpenCloseSearch] = useState(true)
+    const { pathname } = useLocation();
+    const [openCloseSearch, setOpenCloseSearch] = useState(true);
     return (
-        <div className='flex  w-screen justify-between px-6 h-20 items-center' >
-
-            <ul className='flex space-x-8 text-gray-700 font-semibold '>
-                <li className='hover:text-green-500'><NavLink to='/dashboard' >Dashboard  </NavLink></li>
-                <li className='hover:text-green-500'><NavLink>Research  </NavLink></li>
-                <li className='hover:text-green-500'><NavLink>Hierarchy  </NavLink></li>
-                <li className='hover:text-green-500'><NavLink>Clients  </NavLink></li>
-                <li className='hover:text-green-500'><NavLink>Analysts  </NavLink></li>
-                <li className='hover:text-green-500'><NavLink to='/' >Settings  </NavLink></li>
-                <li className='hover:text-green-500'><NavLink>Help  </NavLink></li>
+        <div className="flex  w-screen justify-between px-6 h-20 items-center">
+            <ul className="flex space-x-8 text-gray-700 font-semibold ">
+                <li className={`text-gray-600 font-bold ${pathname.includes('dashboard') && 'text-green-500'}`}>
+                    <Link to="/dashboard">Dashboard </Link>
+                </li>
+                <li className={`text-gray-600 font-bold ${pathname.includes('research') && 'text-green-500'}`}>
+                    <Link>Research </Link>
+                </li>
+                <li className={`text-gray-600 font-bold ${pathname.includes('hierarchy') && 'text-green-500'}`}>
+                    <Link>Hierarchy </Link>
+                </li>
+                <li className={`text-gray-600 font-bold ${pathname.includes('clients') && 'text-green-500'}`}>
+                    <Link>Clients </Link>
+                </li>
+                <li className={`text-gray-600 font-bold ${pathname.includes('analysts') && 'text-green-500'}`}>
+                    <Link>Analysts </Link>
+                </li>
+                <li className={`text-gray-600 font-bold ${pathname.includes('') && 'text-green-500'}`}>
+                    <Link to="/">Settings </Link>
+                </li>
+                <li className={`text-gray-600 font-bold ${pathname.includes('help') && 'text-green-500'}`}>
+                    <Link>Help </Link>
+                </li>
             </ul>
 
-            <div className='flex space-x-6 text-xl items-center'>
-                <button onClick={() => setOpenCloseSearch(false)} className='outline-none' >
-                    {openCloseSearch ?
+            <div className="flex space-x-6 text-xl items-center">
+                <button onClick={() => setOpenCloseSearch(false)} className="outline-none">
+                    {openCloseSearch ? (
                         <LuSearch />
-                        :
+                    ) : (
                         <form>
-                            <label htmlFor="search">  </label>
-                            <input type="search" name="search" id="search" placeholder='Search'
-                                className='rounded-lg bg-zinc-200 outline-none border-none 
-                                 focus:bg-white placeholder:text-base px-4 py-1 focus:outline-none focus:border-none' />
+                            <label htmlFor="search"> </label>
+                            <input
+                                type="search"
+                                name="search"
+                                id="search"
+                                placeholder="Search"
+                                className="rounded-lg bg-zinc-200 outline-none border-none focus:bg-white placeholder:text-base px-4 py-1 focus:outline-none focus:border-none"
+                            />
                         </form>
-                    }
+                    )}
                 </button>
                 <FaRegBell />
                 <TbUserSquareRounded />
             </div>
-
         </div>
-    )
-}
+    );
+};
 
-export default AdminHomeNavbar
+export default AdminHomeNavbar;

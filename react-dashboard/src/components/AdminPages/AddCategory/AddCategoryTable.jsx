@@ -3,7 +3,7 @@ import { MdOutlineModeEdit } from "react-icons/md";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
 
-const AddCategoryTable = ({ item }) => {
+const AddCategoryTable = ({ item, onDelete }) => {
 
     return (
 
@@ -32,7 +32,7 @@ const AddCategoryTable = ({ item }) => {
                     <MdOutlineModeEdit className='text-lg' />
                 </td>
                 <td className=" py-4 ">
-                    <RiDeleteBin5Line className='text-lg' />
+                    <button onClick={onDelete(item.id)} ><RiDeleteBin5Line className='text-lg' /></button>
                 </td>
             </tr>
 

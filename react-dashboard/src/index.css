@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .active {
+.active {
     @apply text-white
-} */
+}
 
 /* body {
     @apply font-serif
