@@ -12,12 +12,35 @@ import AddCategoryTable from './AddCategoryTable';
 import tableData from '../../../tableData'
 
 const AddCategory = () => {
+
+    //dropdown states
     const [categoryInputSt, setCategoryInputSt] = useState(false)
     const [categoryInputNd, setCategoryInputNd] = useState(false)
     const [categoryInputRd, setCategoryInputRd] = useState(false)
 
+    //table data
     const [data, setData] = useState(tableData)
+    const [dataUpdate, setDataUpdate] = useState(tableData)
     console.log(data[0].id)
+
+    //search function state
+    const [search, setSearch] = useState('')
+
+    //search function 
+    const onSearch = (text) => {
+        if (text === '') {
+            setData(dataUpdate)
+        }
+        else {
+
+            let tempList = data.filter(item => {
+                return item.category_name.toLowerCase().indexOf(text.toLowerCase()) > -1; //-1 false
+            })
+            setData(tempList)
+        }
+    }
+
+
     return (
         <Home>
 
@@ -49,7 +72,11 @@ const AddCategory = () => {
                             <label htmlFor="name" className='text-zinc-400' >Name</label>
                         </div>
                         <div className='flex items-center space-x-7' >
-                            <input type="text" name="name" id="name" placeholder='Search by Category'
+                            <input value={search} onChange={(e) => {
+                                setSearch(e.target.value)
+                                onSearch(e.target.value)
+                            }}
+                                type="text" name="name" id="name" placeholder='Search by Category'
                                 className='ps-5 pe-16 py-2 items-center outline-none bg-white rounded-md shadow' />
                             <IoIosRefresh className='text-green-600 text-2xl' />
                         </div>
@@ -60,7 +87,6 @@ const AddCategory = () => {
 
                 {/* table div  */}
                 {/* <div className=' mt-8'> */}
-
 
                 <div className="relative overflow-x-auto   mt-8">
                     <table className="w-full text-sm text-left rtl:text-right text-zinc-600 ">
@@ -101,7 +127,6 @@ const AddCategory = () => {
                         </tbody>
                     </table>
                 </div>
-
 
                 {/* </div> */}
 

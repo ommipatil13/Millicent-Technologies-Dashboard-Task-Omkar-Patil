@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import { MdOutlineModeEdit } from "react-icons/md";
+import { RiDeleteBin5Line } from "react-icons/ri";
+
 
 const AddCategoryTable = ({ item }) => {
 
@@ -25,11 +28,11 @@ const AddCategoryTable = ({ item }) => {
                 <td className="px-4 py-4">
                     {item.leg_2_tracking}
                 </td>
-                <td className=" py-4 text-right">
-                    edit
+                <td className=" py-4 ">
+                    <MdOutlineModeEdit className='text-lg' />
                 </td>
-                <td className=" py-4 text-center">
-                    del
+                <td className=" py-4 ">
+                    <RiDeleteBin5Line className='text-lg' />
                 </td>
             </tr>
 
